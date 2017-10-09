@@ -1,0 +1,18 @@
+/*
+Designed with Progressive Enchancement Approach.
+Media Queries are modifications for tablets and larger devices.
+Color Palette
+
+#ffffff
+
+TODO: N/A
+*/
+
+/* Global Styles
+----------------------------*/
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
