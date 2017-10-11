@@ -30,6 +30,17 @@ body, button {
 h1, h2, h3 {
   font-family: 'Alegreya Sans', sans-serif;
 }
+h2 {
+  text-align: center;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+label {
+  display: block;
+}
 /* Navbar
 ----------------------------*/
 header {
@@ -47,7 +58,7 @@ nav a, header a {
 #branding {
   display: inline-block;
   font-family: 'Grand Hotel', cursive;
-  font-size: 50px;
+  font-size: 30px;
   padding: 6px 12px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -72,7 +83,7 @@ nav a, header a {
   background-color: #ffffff;
   color: #0675D6;
 }
-a.nav-freetrial {
+a.freetrial {
   font-size: 20px;
   background-color: #ffffff;
   color: #0675D6;
@@ -82,10 +93,38 @@ a.nav-freetrial {
   border: none;
   border-radius: 10px;
 }
-a.nav-freetrial:hover {
+a.freetrial:hover {
   background-color: #4CBB17;
   color: #ffffff;
 }
+
+/*Intro
+----------------------------------------*/
+
+#intro {
+  background-image: linear-gradient(rgba(77,77,77,0.3), rgba(77,77,77,0.7)), url("../img/intro-bg.jpeg");
+  background-position: left bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 380px;
+  color: #FFFFFF;
+  text-shadow: 2px 2px 4px #000000;
+}
+#intro h1 {
+  padding-top: 10px;
+  font-size: 40px;
+  text-align: center;
+}
+a.summary-freetrial {
+  display: block;
+  margin: 20px auto;
+  background-color: #F0C808;
+  text-decoration: none;
+  text-shadow: none;
+  text-align: center;
+  color: #000000;
+}
+
 
 /*Media Queries
 ----------------------------------------*/
@@ -96,6 +135,9 @@ a.nav-freetrial:hover {
 @media (min-width: 576px) {
   /* Navbar
   ----------------------------*/
+  #branding {
+    font-size: 50px;
+  }
   .main-nav a {
     display: inline-block;
     border-radius: 10px;
@@ -108,6 +150,17 @@ a.nav-freetrial:hover {
   a.nav-freetrial {
     width: auto;
     margin-left: 10px;
+  }
+  /*Intro
+  -----------------------------*/
+  #intro {
+    height: 500px;
+  }
+  #intro h1 {
+    font-size: 70px;
+  }
+  .summary {
+    font-size: 1.3em;
   }
 }
 /*Large devices (desktops, less than 1200px)*/
