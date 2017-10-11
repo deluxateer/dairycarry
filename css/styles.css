@@ -1,18 +1,132 @@
 /*
 Designed with Progressive Enchancement Approach.
 Media Queries are modifications for tablets and larger devices.
-Color Palette
 
-#ffffff
+Color Palette:
+
+#06AED5 -- TRUE BLUE
+#FFF1D0 -- PAPAYA WHIP
+#086788 -- SEA BLUE
+#F0C808 -- YELLOW (MUNSELL)
+#DD1C1A -- MAXIMUM RED
+
+https://coolors.co/0675d6-fff1d0-086788-f0c808-dd1c1a
 
 TODO: N/A
 */
 
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:700|Grand+Hotel|Open+Sans:600');
+
 /* Global Styles
 ----------------------------*/
 
-body {
+body, button {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #FFF1D0;
   margin: 0;
   padding: 0;
   line-height: 1;
 }
+h1, h2, h3 {
+  font-family: 'Alegreya Sans', sans-serif;
+}
+/* Navbar
+----------------------------*/
+header {
+  text-align: center;
+  color: #ffffff;
+  background-color: #0675D6;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+nav a, header a {
+  color: #ffffff;
+  text-decoration: none;
+}
+/* <Branding> */
+#branding {
+  display: inline-block;
+  font-family: 'Grand Hotel', cursive;
+  font-size: 50px;
+  padding: 6px 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: solid 1px #ffffff;
+  border-radius: 10px;
+}
+.subheading {
+  display: block;
+  font-family: 'Times New Roman', sans-serif;
+  text-transform: uppercase;
+  padding-top: 10px;
+  font-size: 25%;
+}
+/* </Branding> */
+
+.main-nav a {
+  display: block;
+  font-size: 20px;
+  padding: 10px;
+}
+.main-nav a:hover {
+  background-color: #ffffff;
+  color: #0675D6;
+}
+a.nav-freetrial {
+  font-size: 20px;
+  background-color: #ffffff;
+  color: #0675D6;
+  width: 38%;
+  margin: 10px auto;
+  padding: 15px 32px;
+  border: none;
+  border-radius: 10px;
+}
+a.nav-freetrial:hover {
+  background-color: #4CBB17;
+  color: #ffffff;
+}
+
+/*Media Queries
+----------------------------------------*/
+
+/*Extra small devices (portrait phones, less than 576px)*/
+/*@media (max-width: 575px) {}*/
+/*Small devices (landscape phones, less than 768px)*/
+@media (min-width: 576px) {
+  /* Navbar
+  ----------------------------*/
+  .main-nav a {
+    display: inline-block;
+    border-radius: 10px;
+  }
+}
+/*Medium devices (tablets, less than 992px)*/
+@media (min-width: 768px) {
+  /* Navbar
+  ----------------------------*/
+  a.nav-freetrial {
+    width: auto;
+    margin-left: 10px;
+  }
+}
+/*Large devices (desktops, less than 1200px)*/
+@media (min-width: 992px) {
+
+  /* Navbar
+  ----------------------------*/
+  .nav-container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+  }
+  #branding {
+    float: left;
+  }
+  .main-nav {
+    float: right;
+    margin-top: 23px;
+  }
+}
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {}
