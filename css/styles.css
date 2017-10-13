@@ -1,25 +1,25 @@
 /*
 Designed with Progressive Enchancement Approach.
-Media Queries are modifications for tablets and larger devices.
+Media Queries are modifications for portrait phones, tablets and larger devices.
 
 Color Palette:
 
 #06AED5 -- TRUE BLUE
 #FFF1D0 -- PAPAYA WHIP
+#0DB1E8 -- CYAN (PROCESS)
 #086788 -- SEA BLUE
 #F0C808 -- YELLOW (MUNSELL)
 #DD1C1A -- MAXIMUM RED
 
 https://coolors.co/0675d6-fff1d0-086788-f0c808-dd1c1a
 
-TODO: N/A
+TODO: Add Credit Card Information section, add accessiblity support
 */
 
 @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:700|Grand+Hotel|Open+Sans:600');
 
 /* Global Styles
 ----------------------------*/
-
 body, button {
   font-family: 'Open Sans', sans-serif;
   background-color: #FFF1D0;
@@ -29,26 +29,33 @@ body, button {
 }
 h1, h2, h3 {
   font-family: 'Alegreya Sans', sans-serif;
+  margin-top: 0;
+  text-align: center;
 }
 h2 {
-  text-align: center;
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.3em;
+}
+p {
+  line-height: 135%;
 }
 .container {
   width: 80%;
   margin: auto;
   overflow: hidden;
+  padding: 30px 0;
 }
-label {
-  display: block;
-}
+
 /* Navbar
 ----------------------------*/
 header {
   text-align: center;
   color: #ffffff;
   background-color: #0675D6;
-  padding-bottom: 10px;
   border-bottom: 1px solid rgba(0,0,0,0.3);
+  padding-bottom: 12px;
 }
 nav a, header a {
   color: #ffffff;
@@ -99,25 +106,23 @@ a.freetrial:hover {
 }
 
 /*Intro
-----------------------------------------*/
-
+----------------------------*/
 #intro {
   background-image: linear-gradient(rgba(77,77,77,0.3), rgba(77,77,77,0.7)), url("../img/intro-bg.jpeg");
   background-position: left bottom;
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 380px;
+  min-height: 360px;
   color: #FFFFFF;
   text-shadow: 2px 2px 4px #000000;
 }
 #intro h1 {
   padding-top: 10px;
-  font-size: 40px;
-  text-align: center;
+  font-size: 2.5em;
 }
 a.summary-freetrial {
   display: block;
-  margin: 20px auto;
+  margin: 20px auto 0;
   background-color: #F0C808;
   text-decoration: none;
   text-shadow: none;
@@ -125,6 +130,142 @@ a.summary-freetrial {
   color: #000000;
 }
 
+/* How It Works
+----------------------------*/
+#how img {
+  display: block;
+  min-width: 100%;
+  margin: auto;
+}
+
+/* Sourcing
+----------------------------*/
+
+#sourcing {
+  /*background-image: linear-gradient(rgba(77,77,77,0.3), rgba(77,77,77,0.7)), url("../img/sourcing-copy.jpg");
+  background-position: left bottom;*/
+
+  /*Check if the commented styles below work for smaller text*/
+  background-image: linear-gradient(rgba(77,77,77,0.3), rgba(77,77,77,0.7)), url("../img/sourcing.jpg");
+  background-position: left bottom;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #FFFFFF;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+/* Testimonials
+----------------------------*/
+
+#testimonials {
+  background-color: #0DB1E8;
+  color: #ffffff;
+}
+
+blockquote{
+  display:block;
+  background: #ffffff;
+  padding: 15px 20px 15px 45px;
+  margin: 0 0 20px;
+  position: relative;
+  line-height: 1.2;
+  color: #666666;
+  border-left: 15px solid #F0C808;
+  border-right: 2px solid #F0C808;
+  border-radius: 20px;
+}
+blockquote:hover {
+  border-left: 15px solid #DD1C1A;
+  border-right: 2px solid #DD1C1A;
+}
+blockquote::before{
+  content: "\201C"; /*Unicode for Left Double Quote*/
+  font-size: 60px;
+  font-weight: bold;
+  color: #999;
+  position: absolute;
+  left: 10px;
+  top:5px;
+}
+
+blockquote::after{
+  /*Reset to make sure*/
+  content: "";
+}
+.quote {
+  font-style: italic;
+}
+.client, .quote-intro {
+  display: block;
+  text-align: right;
+  padding: 4px;
+}
+.quote-intro {
+  color: #000000;
+  font-size: 1.2em;
+  text-align: left;
+  font-weight: bolder;
+}
+
+/* Free Trial
+----------------------------*/
+
+fieldset {
+  padding: 13px;
+  margin: 10px 0;
+  border-style: dotted;
+  border-radius: 6px;
+}
+legend {
+  text-align: center;
+  font-size: 1.3em;
+}
+label, input, select, option{
+  display: block;
+  font-size: 1em;
+}
+input[type="checkbox"], label[for="checkbox"] {
+  display: inline;
+}
+.help-block {
+  color: #999999;
+  font-size: 0.8em;
+}
+select {
+  /*color: #999999;*/
+  background-color: #ffffff;
+}
+input[type="text"], input[type="number"], input[type="submit"], select {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: none;
+}
+label:focus, input:focus, select:focus, option:focus {
+  border-color: lightblue;
+}
+input[type="submit"] {
+  background-color: #F0C808;
+  font-size: 1.2em;
+}
+input[type="submit"]:hover {
+  background-color: #4CBB17;
+  color: #ffffff;
+}
+
+/* Footer
+----------------------------*/
+
+footer {
+  background-color: #0675D6;
+  color: #ffffff;
+}
+.phone {
+  color: #F0C808;
+}
 
 /*Media Queries
 ----------------------------------------*/
@@ -142,9 +283,19 @@ a.summary-freetrial {
     display: inline-block;
     border-radius: 10px;
   }
+  /*How It Works
+  -----------------------------*/
+  #how img {
+    float: left;
+    min-width: 50%;
+    margin: 7px 30px 10px 0;
+  }
 }
 /*Medium devices (tablets, less than 992px)*/
 @media (min-width: 768px) {
+  .container {
+    font-size: 20px;
+  }
   /* Navbar
   ----------------------------*/
   a.nav-freetrial {
@@ -157,10 +308,17 @@ a.summary-freetrial {
     height: 500px;
   }
   #intro h1 {
-    font-size: 70px;
+    font-size: 3.5em;
   }
-  .summary {
-    font-size: 1.3em;
+  /* Testimonials
+  ----------------------------*/
+  .flex-row {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  blockquote {
+    margin: 0 10px 20px;
+    flex: 2;
   }
 }
 /*Large devices (desktops, less than 1200px)*/
@@ -179,6 +337,36 @@ a.summary-freetrial {
   .main-nav {
     float: right;
     margin-top: 23px;
+  }
+  /* Free Trial
+  ----------------------------*/
+  #subscription-form {
+    display: flex;
+    align-content: space-between;
+    align-items: flex-start;
+    flex-flow: row wrap;
+  }
+  #product-selection, #shipping-address {
+    width: 40%;
+    margin: 0 20px;
+  }
+  input[type="submit"] {
+    margin-left: auto;
+    /*margin-right: 20px;*/
+    width: 38%;
+  }
+  fieldset {
+    margin: 0;
+  }
+  /* Footer
+  ----------------------------*/
+  footer p {
+    /*display: inline;*/
+    float: left;
+    font-size: 0.8em;
+  }
+  .legal {
+    float: right;
   }
 }
 /*Extra large devices (large desktops, 1200px and up)*/
