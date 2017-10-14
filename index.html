@@ -10,12 +10,12 @@
   <script src="js/script.js"></script>
 </head>
 <body>
-  <header>
+  <header role="banner">
     <div class="nav-container">
       <div id="branding">
         <a href="#">DairyCarry<span class="subheading">Milk Delivery</span></a>
       </div>
-      <nav>
+      <nav role="navigation">
         <div class="main-nav">
           <a href="#how">How It Works</a>
           <a href="#sourcing">Sourcing</a>
@@ -25,7 +25,7 @@
       </nav>
     </div>
   </header>
-  <main>
+  <main role="main">
     <section id="intro">
       <div class="container">
         <h1>The modern milkman service, with a twist.</h1>
@@ -120,7 +120,7 @@
       <div class="container">
         <h2>The first month is on us!</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        <form action="index.html" method="post">
+        <form action="index.html" method="post" role="form">
           <div id="subscription-form">
           <div id="selection-and-payment">
             <fieldset id="product-selection">
@@ -144,41 +144,44 @@
               <legend>Card Details:</legend>
               <fieldset>
                 <legend>Card Type:</legend>
-                <div class="cards">
-                  <input id=visa name=cardtype type=radio />
-                  <label for=visa>VISA</label>
-                </div>
-                <div class="cards">
-                  <input id=amex name=cardtype type=radio />
-                  <label for=amex>AmEx</label>
-                </div>
-                <div class="cards">
-                  <input id=mastercard name=cardtype type=radio />
-                  <label for=mastercard>Mastercard</label>
-                </div>
+                  <div class="cards">
+                    <input id=visa name=cardtype type=radio required />
+                    <label for=visa>VISA</label>
+                  </div>
+                  <div class="cards">
+                    <input id=amex name=cardtype type=radio />
+                    <label for=amex>AmEx</label>
+                  </div>
+                  <div class="cards">
+                    <input id=mastercard name=cardtype type=radio />
+                    <label for=mastercard>Mastercard</label>
+                  </div>
               </fieldset>
               <label for=cardnumber>Card Number</label>
-              <input id=cardnumber name=cardnumber type=number required />
+              <input id="cardnumber" aria-describedby="cardnumberDes" name=cardnumber type=number required placeholder="16 Digit Card Number"/>
+              <div class="offscreen" id="cardnumberDes">16 Digit Card Number</div>
               <label for=secure>Security Code</label>
-              <input id=secure name=secure type=number required />
+              <input id=secure aria-describedby="secureDes"name=secure type=number required placeholder="3 Digit Security Code"/>
+              <div class="offscreen" id="secureDes">3 Digit Security Code</div>
               <label for=namecard>Name on Card</label>
-              <input id=namecard name=namecard type=text placeholder="Exact name as on the card" required />
+              <input id=namecard name=namecard type=text aria-describedby="namecardDes" placeholder="Exact name as on the card" required />
+              <div class="offscreen" id="namecardDes">Exact name as on the card</div>
             </fieldset>
           </div>
             <fieldset id="shipping-address">
               <legend>Shipping Address:</legend>
               <label>Name:</label>
-              <input type="text" name="name" placeholder="John Doe">
+              <input type="text" name="name" required placeholder="John Doe">
               <label>Address 1:</label>
-              <input type="text" name="address-line1" placeholder="Address Line 1">
+              <input type="text" name="address-line1" required  placeholder="Address Line 1">
               <p class="help-block">Street address, P.O. box, company name, c/o</p>
               <label>Address 2:</label>
               <input type="text" name="address-line2" placeholder="Address Line 2">
               <p class="help-block">Apartment, suite, unit, building, floor, etc.</p>
               <label class="control-label">City / Town</label>
-              <input type="text" name="city" placeholder="City">
+              <input type="text" name="city" required placeholder="City">
               <label>State:</label>
-              <select>
+              <select required>
                 <option value="default">-- State --</option>
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
@@ -233,7 +236,8 @@
                 <option value="WY">Wyoming</option>
               </select>
               <label>Zip Code:</label>
-              <input type="number" pattern="[0-9]{5}" title="Five digit zip code" placeholder="Five Digit Zip Code">
+              <input type="number" pattern="[0-9]{5}" title="Five digit zip code" aria-describedby="zipDes" required placeholder="Five Digit Zip Code">
+              <div class="offscreen" id="zipDes">Five Digit Zip Code</div>
             </fieldset>
           </div>
           <input type="submit" value="Submit">
@@ -241,7 +245,7 @@
       </div>
     </section>
   </main>
-  <footer>
+  <footer role="contentinfo">
     <div class="container">
       <p>Call us toll-free at <span class="phone">888-555-1212</span></p>
       <p class="legal">&copy; 2017 DairyCarry, LLC. All rights reserved.</p>

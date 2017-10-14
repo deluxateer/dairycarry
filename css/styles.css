@@ -19,8 +19,6 @@ Color Palette:
 https://coolors.co/0675d6-fff1d0-086788-f0c808-dd1c1a
 
 TODO:
-  *  Add Credit Card Information section
-  *  Add accessiblity support
   *  Add sufficient metatags
 */
 
@@ -55,6 +53,17 @@ p {
   overflow: hidden;
   padding: 30px 0;
 }
+/*visible only to screen readers*/
+.offscreen {
+ clip-path: inset(100%);
+ clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; /* added line */
+  width: 1px;
+ }
 
 /* Navbar
 ----------------------------*/
