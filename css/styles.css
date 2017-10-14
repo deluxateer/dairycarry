@@ -1,4 +1,9 @@
 /*
+Author: ***REMOVED***
+Initialize: 2017
+https://www.github.com/***REMOVED***
+
+
 Designed with Progressive Enchancement Approach.
 Media Queries are modifications for portrait phones, tablets and larger devices.
 
@@ -13,7 +18,10 @@ Color Palette:
 
 https://coolors.co/0675d6-fff1d0-086788-f0c808-dd1c1a
 
-TODO: Add Credit Card Information section, add accessiblity support
+TODO:
+  *  Add Credit Card Information section
+  *  Add accessiblity support
+  *  Add sufficient metatags
 */
 
 @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:700|Grand+Hotel|Open+Sans:600');
@@ -222,11 +230,10 @@ legend {
   font-size: 1.3em;
 }
 label, input, select, option{
-  display: block;
   font-size: 1em;
 }
-input[type="checkbox"], label[for="checkbox"] {
-  display: inline;
+.cards {
+  display: inline-block;
 }
 .help-block {
   color: #999999;
@@ -346,22 +353,23 @@ footer {
     align-items: flex-start;
     flex-flow: row wrap;
   }
-  #product-selection, #shipping-address {
+  #selection-and-payment, #shipping-address {
     width: 40%;
-    margin: 0 20px;
   }
   input[type="submit"] {
-    margin-left: auto;
-    /*margin-right: 20px;*/
+    float: right;
     width: 38%;
   }
   fieldset {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  #shipping-address {
+    margin-left: auto;
   }
   /* Footer
   ----------------------------*/
   footer p {
-    /*display: inline;*/
     float: left;
     font-size: 0.8em;
   }
