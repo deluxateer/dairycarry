@@ -13,7 +13,7 @@
   <header role="banner">
     <div class="nav-container">
       <div id="branding">
-        <a href="#">DairyCarry<span class="subheading">Milk Delivery</span></a>
+        <a href="index.html">DairyCarry<span class="subheading">Milk Delivery</span></a>
       </div>
       <nav role="navigation">
         <div class="main-nav">
@@ -29,21 +29,19 @@
     <section id="intro">
       <div class="container">
         <h1>The modern milkman service, with a twist.</h1>
-        <div class="summary">
           <p>We distribute various types of fresh, high-quality milk products all over the US. Name a location, and we will routinely deliver them there at an affordable rate.</p>
           <p style="text-align: center;">Try our products free for 30 days.</p>
-        </div>
         <a href="#freetrial" class="freetrial summary-freetrial" role="button">Free Trial</a>
       </div>
     </section>
     <section id="how">
       <div class="container">
         <h2>How It Works</h2>
-        <img style="width: 30%;" src="img/milk-bottles.jpg" alt="milk-bottles">
+        <img src="img/milk-bottles.jpg" alt="milk-bottles">
         <p>Simply fill out the subscription form below, filling out what type of milk product you would like to be delivered to your door. Be sure to include which days you would like have a delivery. You can opt for having your milk powdered, otherwise it will be delivered in glass bottles. Each item has a flat rate of <span style="color: #4CBB17;">$3.00 per quantity, per day.</span></p>
-        <p>You will be assigned a delivery date when you register based on your zip code. You will need to place a cooler outside your home (preferably in the shade) by 6 am. The cooler needs to be able to accommodate bottles that are 11 inches tall and big enough to hold your entire order. Dairy boxes are not supplied, as they can be expensive. If you would prefer a dairy box, there are several options that you can purchase online. The cooler <strong style="color: #DD1C1A;">MUST</strong> have ice or Icepaks in it. The delivery cannot be complete without them. A good option is to put two or three plastic water bottles in your freezer and reuse them in your cooler weekly. </p>
+        <p>You will be assigned a delivery date when you register based on your zip code. You will need to place a cooler outside your home (preferably in the shade) by 6 am. The cooler needs to be able to accommodate bottles that are 11 inches tall and big enough to hold your entire order. Dairy boxes are not supplied, as they can be expensive. If you would prefer a dairy box, there are several options that you can purchase online. The cooler <strong>MUST</strong> have ice or Icepaks in it. The delivery cannot be complete without them. A good option is to put two or three plastic water bottles in your freezer and reuse them in your cooler weekly. </p>
         <p>For more information, please contact us on our number: 123-456-7890 or send us an email at <a href="mailto:***REMOVED***" target="_blank">help@dairycarry.com</a>.</p>
-      </div><!-- container -->
+      </div>
     </section>
     <section id="sourcing">
       <div class="container">
@@ -57,7 +55,6 @@
       <div class="container">
         <h2>Testimonials</h2>
         <h3>Lend an ear (er, eye) to what our clients have to say about us:</h3>
-        <div class="testimonies">
           <div class="flex-row">
             <blockquote id="hunter">
               <div class="quote">
@@ -114,15 +111,15 @@
               </div>
             </blockquote>
           </div><!-- flex-row -->
-        </div><!-- testimonies -->
       </div><!-- container -->
     </section>
     <section id="freetrial">
       <div class="container">
+        <iframe name="dummy" hidden="hidden"></iframe>
         <h2>The first month is on us!</h2>
         <p>Order to your heart's content, as we would love to show you the calibur of our milk, at no cost to you. Please keep in mind that a reoccuring monthly charge will be deducted every month, but we're confident you won't mind! Otherwise, you can contact us and cancel your subscription at no penalty. Shipping is free for orders above $30 and for $10 paid, $1 will be donated to the American Red Floss Association. Thank you for your patronage!</p>
-        <form action="index.html" method="post" role="form">
-          <div id="subscription-form">
+        <form id="subscription-form" action="index.html" method="post" target="dummy" onsubmit="return thanks();" role="form">
+          <div class="subscription-form">
           <div id="selection-and-payment">
             <fieldset id="product-selection">
               <legend>Item Information:</legend>
@@ -138,10 +135,10 @@
               </select>
               <label>Quantity:</label>
               <input type="number" name="quantity" min="1" value="1">
-              <input id="checkbox" type="checkbox" name="powdered-option" value="powdered">
-              <label for="checkbox">Powdered?</label>
+              <input id="powdered" type="checkbox" name="powdered-option" value="powdered">
+              <label for="powdered">Powdered?</label>
               <div class="delivery-days">
-                <label style="display: block; margin: 15px 0;">Delivery Days:</label>
+                <label>Delivery Days:</label>
                 <div>
                   <input type="checkbox" id="sunday" name="days" value="sunday">
                   <label for="sunday">Sunday</label>
@@ -272,7 +269,7 @@
               <div class="offscreen" id="zipDes">Five Digit Zip Code</div>
             </fieldset>
           </div>
-          <input type="submit" value="Submit">
+          <input type="submit" value="Submit" onclick="return thanks();">
         </form>
       </div>
     </section>
@@ -287,5 +284,16 @@
     </div>
   </footer>
   <!-- <script src="js/colors.js" type="text/javascript"></script> -->
+  <script type="text/javascript">
+  function thanks() {
+    var form = document.getElementById("subscription-form");
+    form.submit(function(event) {
+      var thankyou = document.createElement("p");
+      thankyou.append("Thank you for your patronage!");
+      form.append(thankyou);
+      return thankyou;
+    });
+  }
+  </script>
 </body>
 </html>

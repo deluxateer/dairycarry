@@ -45,6 +45,9 @@ h3 {
 p {
   line-height: 135%;
 }
+strong {
+  color: #DD1C1A;
+}
 .container {
   width: 80%;
   margin: auto;
@@ -149,18 +152,13 @@ a.summary-freetrial {
 ----------------------------*/
 #how img {
   display: block;
-  min-width: 100%;
-  margin: auto;
+  width: 100%;
 }
 
 /* Sourcing
 ----------------------------*/
 
 #sourcing {
-  /*background-image: linear-gradient(rgba(77,77,77,0.3), rgba(77,77,77,0.7)), url("../img/sourcing-copy.jpg");
-  background-position: left bottom;*/
-
-  /*Check if the commented styles below work for smaller text*/
   background-image: linear-gradient(rgba(77,77,77,0.3), rgba(77,77,77,0.7)), url("../img/sourcing.jpg");
   background-position: left bottom;
 
@@ -201,7 +199,7 @@ blockquote::before{
   color: #999;
   position: absolute;
   left: 10px;
-  top:5px;
+  top: 5px;
 }
 
 blockquote::after{
@@ -272,6 +270,10 @@ input[type="submit"]:hover {
   background-color: #4CBB17;
   color: #ffffff;
 }
+.delivery-days label:first-child {
+  display: block;
+  margin: 15px 0;
+}
 
 /* Footer
 ----------------------------*/
@@ -304,7 +306,7 @@ footer {
   -----------------------------*/
   #how img {
     float: left;
-    min-width: 50%;
+    width: 35%;
     margin: 7px 30px 10px 0;
   }
 }
@@ -357,7 +359,7 @@ footer {
   }
   /* Free Trial
   ----------------------------*/
-  #subscription-form {
+  .subscription-form {
     display: flex;
     align-content: space-between;
     align-items: flex-start;
